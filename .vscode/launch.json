@@ -1,0 +1,36 @@
+{
+   // Use IntelliSense to find out which attributes exist for C# debugging
+   // Use hover for the description of the existing attributes
+   // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
+   "version": "0.2.0",
+   "configurations": [
+        {
+            "name": "Debug AccountService",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build_account",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceRoot}/src/PiggyMetrics.AccountService/bin/Debug/netcoreapp1.1/PiggyMetrics.AccountService.dll",
+            "args": [],
+            "cwd": "${workspaceRoot}/src/PiggyMetrics.AccountService",
+            // For more information about the 'console' field, see https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md#console-terminal-window
+            "externalConsole":true,
+            "stopAtEntry": false,
+            "internalConsoleOptions": "openOnSessionStart"
+        },
+        {
+            "name": "Debug HttpApi",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build_httpapi",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceRoot}/src/PiggyMetrics.HttpApi/bin/Debug/netcoreapp1.1/PiggyMetrics.HttpApi.dll",
+            "args": [],
+            "cwd": "${workspaceRoot}/src/PiggyMetrics.HttpApi",
+            // For more information about the 'console' field, see https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md#console-terminal-window
+            "externalConsole":true,
+            "stopAtEntry": false,
+            "internalConsoleOptions": "openOnSessionStart"
+        }
+    ]
+}

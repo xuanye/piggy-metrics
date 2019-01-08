@@ -1,0 +1,21 @@
+version: '2'
+services:
+    mysql:
+        build: ./piggy_db
+        container_name: piggy_mysql
+        ports:
+        - "3306:3306"
+        environment:
+        - MYSQL_ROOT_PASSWORD=Welcome@123
+        - TZ=Asia/Shanghai
+        command: --character-set-server=utf8 --collation-server=utf8_unicode_ci
+        restart: unless-stopped
+    consul:
+        build: ./piggy_consul
+        container_name: piggy_consul
+        ports:
+        - "8400:8400"
+        - "8500:8500"
+        - "8600:8600/udp"
+        command: agent -dev -client 0.0.0.0
+        restart: unless-stopped

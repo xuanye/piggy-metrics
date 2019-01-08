@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="新文件夹\**" />
+    <EmbeddedResource Remove="新文件夹\**" />
+    <None Remove="新文件夹\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DotBPE.Protocol.Amp" Version="1.0.64-alpha" />
+    <PackageReference Include="DotBPE.Rpc" Version="1.0.64-alpha" />
+    <PackageReference Include="DotBPE.Rpc.Netty" Version="1.0.64-alpha" />
+    <PackageReference Include="DotBPE.Plugin.Consul" Version="1.0.64-alpha" />
+    <PackageReference Include="DotBPE.Plugin.Nlog" Version="1.0.64-alpha" />
+    <PackageReference Include="DotBPE.Plugin.Vulcan" Version="1.0.64-alpha" />
+    <PackageReference Include="MySql.Data" Version="8.0.8-dmr" />
+    <PackageReference Include="Google.Protobuf" Version="3.3.0" />
+    <PackageReference Include="Consul" Version="0.7.2.3" />
+  </ItemGroup>
+
+</Project>

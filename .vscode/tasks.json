@@ -1,0 +1,28 @@
+{
+    "version": "0.1.0",
+
+    "isShellCommand": true,
+    "args": [],
+    "tasks": [
+        {
+            "taskName": "build_account",
+            "command": "dotnet",
+            "args": [
+                "build",
+                "${workspaceRoot}/src/PiggyMetrics.AccountService/PiggyMetrics.AccountService.csproj"
+            ],
+            "isBuildCommand": false,
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "taskName": "build_httpapi",
+            "command": "dotnet",
+            "args": [
+                "build",
+                "${workspaceRoot}/src/PiggyMetrics.HttpApi/PiggyMetrics.HttpApi.csproj"
+            ],
+            "isBuildCommand": false,
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}
